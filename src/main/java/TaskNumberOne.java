@@ -3,10 +3,10 @@ import java.util.regex.Pattern;
 public class TaskNumberOne {
     public static void main(String[] args){
         getOutput(getData(fixData(provideData())));}
-    }
+
 
     private static String[] provideData() {
-        return new String[]{"brange, plum, tomato, onibn, grape"};
+        return new String[]{"brange", "plum", "tomato","onibn", "grape"};
     }
 
 
@@ -14,7 +14,7 @@ public class TaskNumberOne {
 private  static  String[] fixData(String[] Data){
     int count =0;
         for (String name: Data) {
-            count++;
+
 
 
     if (Pattern.matches(".range", name)||Pattern.matches("orange", name)||Pattern.matches("o.ange", name)||Pattern.matches("or.nge", name)||Pattern.matches("ora.ge", name)
@@ -40,7 +40,7 @@ private  static  String[] fixData(String[] Data){
                     ||Pattern.matches("grap.", name))
 
                 Data[count]= "grape";
-
+            count++;
 
         }   return  Data;
     }
